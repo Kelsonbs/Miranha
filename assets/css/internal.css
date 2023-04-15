@@ -1,0 +1,74 @@
+@import url('reset.css');
+@import url('global.css');
+@import url('./components/pills.css');
+@import url('./components/navigator.css');
+@import url('./components/link-button.css');
+
+.s-wrapper{
+    display: flex;
+    height: 100vh;
+    flex-flow: row nowrap;
+}
+.s-wrapper .s-left-column{
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.s-wrapper .s-main-content{
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    padding-left: 130px;
+}
+
+.navigation__icon{
+    position:absolute;
+    top: -20px;
+}
+
+.s-wrapper .s-maincontent__top{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.s-wrapper .s-maincontent__bottom{
+   height: 20vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end; 
+}
+
+.s-logo img{
+    margin: 50px 0 30px
+}
+
+.s-description{
+    background-color: rgba(0,0,0,.7 );
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.pills{
+    margin-bottom: 20px;
+}
+.s-description__text p{
+    color: white;
+    line-height: 170%;
+    margin-top: 20px;
+}
+.s-links{
+    border-radius: 20%;
+    border: solid black;
+    padding: 20px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+}
