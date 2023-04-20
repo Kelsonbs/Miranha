@@ -3,11 +3,13 @@
 @import url('./components/pills.css');
 @import url('./components/navigator.css');
 @import url('./components/link-button.css');
+@import url('./components/gallery.css');
 
 .s-wrapper{
     display: flex;
     height: 100vh;
     flex-flow: row nowrap;
+    background-color: aqua;
 }
 .s-wrapper .s-left-column{
     width: 100px;
@@ -26,6 +28,8 @@
     width: 100%;
     background-color: gray;
     padding-left: 130px;
+    background-image: url(../images/spiderman-tobey/movie-01/background.png);
+    background-size: cover;
 }
 
 .navigation__icon{
@@ -39,11 +43,11 @@
     flex-direction: column;
     justify-content: flex-start;
 }
-.s-wrapper .s-maincontent__bottom{
-   height: 20vh;
+.s-maincontent__bottom{
+   height: 40vh;
    display: flex;
    flex-direction: column;
-   justify-content: flex-end; 
+   justify-content: flex-end;
 }
 
 .s-logo img{
@@ -65,10 +69,13 @@
     margin-top: 20px;
 }
 .s-links{
-    border-radius: 20%;
-    border: solid black;
     padding: 20px;
     padding-left: 0;
     display: flex;
     flex-direction: row;
+}
+
+.s-maincontent__bottom img{
+    margin-top: 100px;
+    width: 100%;
 }

@@ -1,0 +1,309 @@
+.gallery{
+    padding: 20px;
+    padding-left: 0;
+}
+.gallery ul{
+    display: flex;
+    flex-direction: row;
+}
+.gallery ul li{
+    margin-left: 25px;
+}
+.gallery ul li:first-child{
+    margin-left: 0px;
+}
+.gallery ul li a img{
+    border:  solid 6px white;
+    border-radius: 15px;
+}
+a.link-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+a.link-button .icon{
+    width: 32px;
+    height: 32px;
+    padding: 3px;
+    background-color: var(--primary-color);
+    border: solid 1px white;
+    background-clip: content-box;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a.link-button .icon .play-icon{
+    border: solid 7px white;
+    width: 0;
+    height: 0;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    margin-right: -7px;
+}
+a.link-button .label{
+    margin-left: 10px;
+}
+.navigator{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+.navigator ul li{
+    margin: 60px 0; 
+}
+.navigator ul li:first-child{
+    margin-top: 0; 
+}
+.navigator ul li:last-child{
+    margin-bottom: 0; 
+}
+.navigator ul li a{
+    color: white;
+    border: solid 2px white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+/* É a linha entre os elementos*/
+.navigator::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 0;
+}
+/* Pra linha não passar por cima do elemento*/
+.navigator ul{
+    z-index: 1;
+}
+.navigator ul li a:hover,
+.navigator ul li a.active{
+    color:var(--primary-color);
+    background-color: white;
+}
+.pills ul{
+    display: flex;
+    flex-direction: row;
+}
+.pills ul li{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 5px 15px;
+    margin:  0 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+.pills ul li:first-child{
+    margin-left: 0;
+}@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+:root{
+    --primary-color:red;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+@import url(./reset.css);
+@import url(./global.css);
+
+body{
+    background-color: var(--primary-color);
+}
+body::before{
+    content: "";
+    background-image: url('../images/spider-man-background.jpg');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.2;
+    background-repeat: no-repeat;
+    background-position: center;
+     background-size: cover;
+
+}
+.s-menu{
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.s-menu__item{
+    display: inline-block;
+    border: 10px black;
+    text-transform: uppercase;
+    margin: 0 1.25rem;
+}
+.s-menu__icon{
+    width: 2.5rem;
+    margin: 0 1.25rem ;
+    vertical-align: middle;
+}
+.s-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.s-card{
+    border: 0.5rem solid white;
+    width: calc(100%/3- 8%);
+    height: 70vh;
+    position: relative;
+    object-fit: contain;
+}
+.s-card__background{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position:absolute;
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+.s-card__image{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    transition: transform 0.5s ease-in-out;
+}
+
+.s-card__title{
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+.s-controller{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+.s-controller__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    transition: transform 0.3s ease-in-out;
+}
+.s-controller__button:hover{
+    transform: scale(1.1);
+}
+.s-controller__button:nth-child(2){
+    margin: 0 3.75rem;
+}
+.s-controller__line{
+    background-color: white;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+
+}
+/*Animação ao passar o mouse por cima*/
+.s-card--hovered .s-card__background{
+    cursor: pointer;
+    opacity: 0;
+
+}
+.s-card--hovered .s-card__image{
+    transform: scale(1.4);
+}
+.s-wrapper{
+    display: flex;
+    height: 100vh;
+    flex-flow: row nowrap;
+    background-color: aqua;
+}
+.s-wrapper .s-left-column{
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.s-wrapper .s-main-content{
+    height: 100%;
+    width: 100%;
+    background-color: gray;
+    padding-left: 130px;
+}
+
+.navigation__icon{
+    position:absolute;
+    top: -20px;
+}
+
+.s-wrapper .s-maincontent__top{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.s-maincontent__bottom{
+   height: 20vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end; 
+}
+
+.s-logo img{
+    margin: 50px 0 30px
+}
+
+.s-description{
+    background-color: rgba(0,0,0,.7 );
+    max-width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+.pills{
+    margin-bottom: 20px;
+}
+.s-description__text p{
+    color: white;
+    line-height: 170%;
+    margin-top: 20px;
+}
+.s-links{
+    padding: 20px;
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+}
+.s-maincontent__bottom{
+
+}
+.s-maincontent__bottom img{
+    margin-top: 50px;
+    width: 100%;
+}
